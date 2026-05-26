@@ -1,0 +1,52 @@
+[
+  {
+    "id": "fact_1",
+    "prompt": "What is the capital city of Australia?",
+    "ground_truth": "Canberra"
+  },
+  {
+    "id": "fact_2",
+    "prompt": "Who wrote the novel '1984'?",
+    "ground_truth": "George Orwell"
+  },
+  {
+    "id": "fact_3",
+    "prompt": "What is the chemical symbol for gold?",
+    "ground_truth": "Au"
+  },
+  {
+    "id": "fact_4",
+    "prompt": "Which planet in the solar system is known as the Red Planet?",
+    "ground_truth": "Mars"
+  },
+  {
+    "id": "fact_5",
+    "prompt": "What year did World War II end?",
+    "ground_truth": "1945"
+  },
+  {
+    "id": "fact_6",
+    "prompt": "Explain the difference between TCP and UDP in networking.",
+    "ground_truth": "TCP is connection-oriented and reliable, UDP is connectionless and faster but unreliable."
+  },
+  {
+    "id": "fact_7",
+    "prompt": "What does ACID stand for in database systems?",
+    "ground_truth": "Atomicity, Consistency, Isolation, Durability"
+  },
+  {
+    "id": "fact_8",
+    "prompt": "Who developed the theory of relativity?",
+    "ground_truth": "Albert Einstein"
+  },
+  {
+    "id": "fact_9",
+    "prompt": "What is the time complexity of binary search?",
+    "ground_truth": "O(log n)"
+  },
+  {
+    "id": "fact_10",
+    "prompt": "What is Kubernetes primarily used for?",
+    "ground_truth": "Container orchestration and deployment management"
+  }
+]
