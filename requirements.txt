@@ -1,0 +1,11 @@
+langchain_openai
+langchain_core
+python-dotenv
+streamlit
+langchain_community
+fastapi
+uvicorn
+openai
+huggingface_hub
+streamlit
+matplotlib
