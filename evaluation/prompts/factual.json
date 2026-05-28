@@ -16,7 +16,7 @@
   },
   {
     "id": "fact_4",
-    "prompt": "Which planet in the solar system is known as the Red Planet?",
+    "prompt": "Which planet is known as the Red Planet?",
     "ground_truth": "Mars"
   },
   {
@@ -26,27 +26,102 @@
   },
   {
     "id": "fact_6",
-    "prompt": "Explain the difference between TCP and UDP in networking.",
-    "ground_truth": "TCP is connection-oriented and reliable, UDP is connectionless and faster but unreliable."
-  },
-  {
-    "id": "fact_7",
     "prompt": "What does ACID stand for in database systems?",
     "ground_truth": "Atomicity, Consistency, Isolation, Durability"
   },
   {
-    "id": "fact_8",
-    "prompt": "Who developed the theory of relativity?",
-    "ground_truth": "Albert Einstein"
-  },
-  {
-    "id": "fact_9",
+    "id": "fact_7",
     "prompt": "What is the time complexity of binary search?",
     "ground_truth": "O(log n)"
   },
   {
-    "id": "fact_10",
+    "id": "fact_8",
+    "prompt": "What is the difference between TCP and UDP?",
+    "ground_truth": "TCP is connection-oriented and reliable; UDP is connectionless and faster but unreliable"
+  },
+  {
+    "id": "fact_9",
     "prompt": "What is Kubernetes primarily used for?",
-    "ground_truth": "Container orchestration and deployment management"
+    "ground_truth": "Container orchestration — automating deployment, scaling, and management of containerized applications"
+  },
+  {
+    "id": "fact_10",
+    "prompt": "Who developed the Python programming language?",
+    "ground_truth": "Guido van Rossum"
+  },
+  {
+    "id": "fact_11",
+    "prompt": "What does REST stand for in web development?",
+    "ground_truth": "Representational State Transfer"
+  },
+  {
+    "id": "fact_12",
+    "prompt": "What is the output of 2 to the power of 10?",
+    "ground_truth": "1024"
+  },
+  {
+    "id": "fact_13",
+    "prompt": "Which data structure uses LIFO (Last In First Out)?",
+    "ground_truth": "Stack"
+  },
+  {
+    "id": "fact_14",
+    "prompt": "What is the capital of Japan?",
+    "ground_truth": "Tokyo"
+  },
+  {
+    "id": "fact_15",
+    "prompt": "Who painted the Mona Lisa?",
+    "ground_truth": "Leonardo da Vinci"
+  },
+  {
+    "id": "fact_16",
+    "prompt": "What is the speed of light in a vacuum?",
+    "ground_truth": "Approximately 299,792,458 metres per second (3 x 10^8 m/s)"
+  },
+  {
+    "id": "fact_17",
+    "prompt": "What does HTTP stand for?",
+    "ground_truth": "HyperText Transfer Protocol"
+  },
+  {
+    "id": "fact_18",
+    "prompt": "What is the largest planet in the solar system?",
+    "ground_truth": "Jupiter"
+  },
+  {
+    "id": "fact_19",
+    "prompt": "In what year was the first iPhone released?",
+    "ground_truth": "2007"
+  },
+  {
+    "id": "fact_20",
+    "prompt": "What sorting algorithm has an average time complexity of O(n log n)?",
+    "ground_truth": "Merge Sort or Quick Sort"
+  },
+  {
+    "id": "fact_21",
+    "prompt": "What is the primary function of the OSI model?",
+    "ground_truth": "To standardise communication between different computer systems by dividing networking into 7 layers"
+  },
+  {
+    "id": "fact_22",
+    "prompt": "What year was the Python programming language first released?",
+    "ground_truth": "1991"
+  },
+  {
+    "id": "fact_23",
+    "prompt": "What is a deadlock in operating systems?",
+    "ground_truth": "A state where two or more processes are waiting for each other to release resources, causing all to be stuck indefinitely"
+  },
+  {
+    "id": "fact_24",
+    "prompt": "What does SQL stand for?",
+    "ground_truth": "Structured Query Language"
+  },
+  {
+    "id": "fact_25",
+    "prompt": "What is the main difference between a process and a thread?",
+    "ground_truth": "A process is an independent program with its own memory space; a thread is a smaller unit within a process that shares memory"
   }
 ]

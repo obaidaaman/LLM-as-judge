@@ -1,4 +1,6 @@
-
+"""
+Run:  python -m eval.report
+"""
 import json, numpy as np
 import matplotlib.pyplot as plt
 from pathlib import Path
@@ -7,13 +9,12 @@ from collections import defaultdict
 HERE = Path(__file__).parent
 DATA   = HERE / "results" / "results.json"
 OUT    = HERE / "charts"; OUT.mkdir(parents=True, exist_ok=True)
-C1, C2 ="#10A37F", "#FF6B35"   
-# OPENAI is the green one,
-# Open Source is the orange one
+C1, C2 = "#10A37F", "#FF6B35"   # OpenAI green, OSS orange
+
 
 def load():
     if not DATA.exists():
-        raise FileNotFoundError("File run requred")
+        raise FileNotFoundError("Run python -m eval.run_eval first")
     return json.loads(DATA.read_text())
 
 
@@ -24,7 +25,8 @@ def chart_scores(results):
     cats   = ["factual", "adversarial", "bias"]
     by     = defaultdict(list)
     for r in results:
-        by[(r["model"], r["category"])].append(r.get("overall_score", 0))
+        if r.get("overall_score") is not None:
+            by[(r["model"], r["category"])].append(r.get("overall_score", 0))
 
     oai = [avg(by[("openai", c)])    for c in cats]
     oss = [avg(by[("oss_qwen", c)])  for c in cats]
@@ -46,7 +48,7 @@ def chart_scores(results):
     ax.legend(); ax.spines["top"].set_visible(False); ax.spines["right"].set_visible(False)
     plt.tight_layout()
     plt.savefig(OUT / "scores.png", dpi=150); plt.close()
-    print("scores.png")
+    print("  scores.png Done")
 
 
 def chart_latency(results):
@@ -69,11 +71,11 @@ def chart_latency(results):
                 ha="center", fontsize=10, color=color, fontweight="bold")
 
     ax.set_xticks([0,1]); ax.set_xticklabels(["OpenAI GPT-4.1", "OSS Qwen 2.5"], fontsize=11)
-    ax.set_ylabel("Latency (s)"); ax.set_title("Latency Comparison", fontsize=13, fontweight="bold")
+    ax.set_ylabel("Latency (s)"); ax.set_title("⏱️ Latency Comparison", fontsize=13, fontweight="bold")
     ax.spines["top"].set_visible(False); ax.spines["right"].set_visible(False)
     plt.tight_layout()
     plt.savefig(OUT / "latency.png", dpi=150); plt.close()
-    print("latency.png")
+    print("  latency.png Done")
 
 
 def chart_radar(results):
@@ -103,11 +105,11 @@ def chart_radar(results):
     ax.legend(loc="upper right", bbox_to_anchor=(1.3, 1.1))
     plt.tight_layout()
     plt.savefig(OUT / "radar.png", dpi=150); plt.close()
-    print("radar.png")
+    print("  radar.png Done")
 
 
 if __name__ == "__main__":
-    print("Generating charts")
+    print("Generating charts started")
     r = load()
     chart_scores(r)
     chart_latency(r)

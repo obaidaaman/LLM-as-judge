@@ -5,16 +5,16 @@ import uuid
 API_URL = "http://localhost:8000"
 
 st.set_page_config(page_title="AI Assistant Comparison", layout="wide")
-st.title("🤖 AI Assistant Comparison")
+st.title(" AI Assistant Comparison")
 st.caption("Compare OpenAI GPT-4.1 vs Open Source Qwen 2.5 — side by side")
 
-# ── Session IDs (one per model, stable for this browser session) ──
+
 if "openai_thread_id" not in st.session_state:
     st.session_state.openai_thread_id = f"openai-{uuid.uuid4().hex[:8]}"
 if "oss_thread_id" not in st.session_state:
     st.session_state.oss_thread_id = f"oss-{uuid.uuid4().hex[:8]}"
 
-# ── Chat histories (displayed in UI) ──
+
 if "openai_messages" not in st.session_state:
     st.session_state.openai_messages = []
 if "oss_messages" not in st.session_state:
@@ -30,7 +30,7 @@ def send_message(query: str, thread_id: str, is_open_source: bool) -> str:
         }, timeout=30)
         return res.json().get("response", "Error: no response")
     except Exception as e:
-        return f"❌ Error: {e}"
+        return f"Error: {e}"
 
 
 def clear_session(thread_id: str):
@@ -40,12 +40,9 @@ def clear_session(thread_id: str):
         pass
 
 
-# ── Layout: two columns, one per model ──
 col1, col2 = st.columns(2)
 
-# ─────────────────────────────────────────
-# LEFT: OpenAI
-# ─────────────────────────────────────────
+
 with col1:
     st.subheader("🟢 OpenAI — GPT-4.1")
 
@@ -55,7 +52,7 @@ with col1:
         st.session_state.openai_messages = []
         st.rerun()
 
-    # Chat display
+
     chat_container_left = st.container(height=500)
     with chat_container_left:
         for msg in st.session_state.openai_messages:
