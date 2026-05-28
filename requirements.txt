@@ -1,11 +1,9 @@
-langchain_openai
-langchain_core
-python-dotenv
-streamlit
-langchain_community
-fastapi
-uvicorn
-openai
-huggingface_hub
-streamlit
-matplotlib
+ fastapi>=0.136.3
+httpx>=0.28.1
+huggingface-hub>=1.16.1
+langfuse>=4.6.1
+matplotlib>=3.10.9
+openai>=2.38.0
+python-dotenv>=1.2.2
+streamlit>=1.57.0
+uvicorn>=0.48.0

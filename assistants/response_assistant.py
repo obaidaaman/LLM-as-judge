@@ -105,16 +105,14 @@ async def handle_tool_calls(msg, messages: list, second_call_fn):
             args
         )
 
-        print("\nTOOL RESULT:\n")
-        print(result)
-
+        
         tool_messages.append({
             "role": "tool",
             "tool_call_id": tc.id,
             "content": str(result)
         })
 
-    print("\nFINAL TOOL MESSAGES:\n")
+    
     print(json.dumps(tool_messages, indent=2))
 
     final = await second_call_fn(tool_messages)
